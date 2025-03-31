@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://tbeefun37p71"]
+
+[node name="Setas_Level" type="Label"]
+light_mask = 2
+offset_left = 527.0
+offset_top = 488.0
+offset_right = 596.0
+offset_bottom = 722.0
+scale = Vector2(1, 0.6)
+theme_override_constants/outline_size = 11
+theme_override_constants/line_spacing = -110
+theme_override_font_sizes/font_size = 126
+text = "^
+|"

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm5taqpmp3wjb"]
+
+[ext_resource type="PackedScene" uid="uid://bgvxvjwwigk6q" path="res://player.tscn" id="1_wq0o4"]
+[ext_resource type="PackedScene" uid="uid://cte1xcxsp0rdl" path="res://placa.tscn" id="3_jhmw1"]
+[ext_resource type="PackedScene" uid="uid://boh6qt7q8af0" path="res://mundo_2_switch.tscn" id="3_mw32k"]
+[ext_resource type="PackedScene" uid="uid://tbeefun37p71" path="res://setas_level.tscn" id="4_no6se"]
+
+[node name="mundo" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_wq0o4")]
+position = Vector2(551, 785)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(0.805, 0.805)
+position_smoothing_enabled = true
+
+[node name="mundo_2_switch" parent="." instance=ExtResource("3_mw32k")]
+position = Vector2(550, 64)
+
+[node name="placa" parent="." instance=ExtResource("3_jhmw1")]
+position = Vector2(551, 376)
+
+[node name="Setas_Level" parent="." instance=ExtResource("4_no6se")]
+
+[node name="Setas_Level2" parent="." instance=ExtResource("4_no6se")]
+offset_left = 515.0
+offset_top = 117.0
+offset_right = 584.0
+offset_bottom = 351.0

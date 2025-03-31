@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://h7trvutjlfwq"]
+
+[ext_resource type="PackedScene" uid="uid://bgvxvjwwigk6q" path="res://player.tscn" id="1_kdduu"]
+[ext_resource type="PackedScene" uid="uid://b0tyhxwto8aou" path="res://aventureiros.tscn" id="2_36xyy"]
+
+[node name="mundo_3" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_kdduu")]
+position = Vector2(575, 536)
+
+[node name="aventureiros" parent="." instance=ExtResource("2_36xyy")]
+position = Vector2(575, 64)

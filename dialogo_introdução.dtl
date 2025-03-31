@@ -1,0 +1,5 @@
+set {lendo} = true
+[Placeholder] - Sua missão é entregar comida para aventureiros.
+Cuidado com o percuso, e entregue a comida em otimo estado certo?
+set {lendo} = false
+set {intro} = false

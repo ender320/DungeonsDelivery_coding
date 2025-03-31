@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cte1xcxsp0rdl"]
+
+[ext_resource type="Script" path="res://placa.gd" id="1_7eey8"]
+[ext_resource type="Texture2D" uid="uid://bhiu1tu4o4lxp" path="res://icon.svg" id="2_qc7b2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ufk8k"]
+radius = 173.84
+
+[node name="placa" type="Area2D"]
+modulate = Color(0.976471, 0.6, 1, 1)
+script = ExtResource("1_7eey8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qc7b2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ufk8k")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = 78.0
+offset_right = 21.0
+offset_bottom = 101.0
+text = "Placa"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0tyhxwto8aou"]
+
+[ext_resource type="Script" path="res://aventureiros.gd" id="1_1ivrn"]
+[ext_resource type="Texture2D" uid="uid://bhiu1tu4o4lxp" path="res://icon.svg" id="2_s23e6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhi7w"]
+size = Vector2(125, 129)
+
+[node name="aventureiros" type="Area2D"]
+script = ExtResource("1_1ivrn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.0705882, 0.333333, 1, 1)
+texture = ExtResource("2_s23e6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_dhi7w")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
