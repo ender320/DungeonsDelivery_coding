@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var speed = 60
+var speed = 80
 var agressive_state = false #idle
 var player 
 var dialogic_start = true
@@ -15,8 +15,15 @@ func _on_detec_zone_body_entered(body):
 		dialogic_start = false
 		await Dialogic.timeline_ended
 		agressive_state = true
-		$MeshInstance2D.visible = false
+		#$MeshInstance2D.visible = false
+	if dialogic_start == false:
+		agressive_state = true
 
 
 func _on_hitbox_area_entered(area):
 	pass # Replace with function body.
+
+
+func _on_detec_zone_body_exited(body):
+	player = body
+	agressive_state = false
