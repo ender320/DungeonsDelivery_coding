@@ -1,24 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdt7yptow4ctt"]
+[gd_scene load_steps=6 format=3 uid="uid://bdt7yptow4ctt"]
 
 [ext_resource type="PackedScene" uid="uid://bgvxvjwwigk6q" path="res://player.tscn" id="1_vrgut"]
 [ext_resource type="PackedScene" uid="uid://dyckmp0cy1s83" path="res://enemy.tscn" id="2_xrmn7"]
 [ext_resource type="PackedScene" uid="uid://cva0xpfxpigxr" path="res://mundo_3_switch.tscn" id="3_724pm"]
 [ext_resource type="PackedScene" uid="uid://tbeefun37p71" path="res://setas_level.tscn" id="4_py8bc"]
+[ext_resource type="PackedScene" uid="uid://c0t1blhokni77" path="res://crt_effect.tscn" id="5_m0fh6"]
 
 [node name="mundo_2" type="Node2D"]
 
 [node name="Setas_Level" parent="." instance=ExtResource("4_py8bc")]
 light_mask = 1
-offset_left = 561.0
+offset_left = 657.0
 offset_top = 64.0
-offset_right = 630.0
+offset_right = 726.0
 offset_bottom = 298.0
 
 [node name="player" parent="." instance=ExtResource("1_vrgut")]
-position = Vector2(593, 579)
+position = Vector2(657, 579)
 
 [node name="enemy" parent="." instance=ExtResource("2_xrmn7")]
-position = Vector2(593, 131)
+position = Vector2(657, 131)
 
 [node name="mundo_3_switch" parent="." instance=ExtResource("3_724pm")]
-position = Vector2(593, 0)
+position = Vector2(657, 0)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("5_m0fh6")]

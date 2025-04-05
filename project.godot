@@ -35,6 +35,12 @@ variables={
 "lendo": false
 }
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/discord-rpc-gd/plugin.cfg")

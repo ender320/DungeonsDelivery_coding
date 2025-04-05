@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm5taqpmp3wjb"]
+[gd_scene load_steps=6 format=3 uid="uid://cm5taqpmp3wjb"]
 
 [ext_resource type="PackedScene" uid="uid://bgvxvjwwigk6q" path="res://player.tscn" id="1_wq0o4"]
+[ext_resource type="PackedScene" uid="uid://c0t1blhokni77" path="res://crt_effect.tscn" id="2_nwsfa"]
 [ext_resource type="PackedScene" uid="uid://cte1xcxsp0rdl" path="res://placa.tscn" id="3_jhmw1"]
 [ext_resource type="PackedScene" uid="uid://boh6qt7q8af0" path="res://mundo_2_switch.tscn" id="3_mw32k"]
 [ext_resource type="PackedScene" uid="uid://tbeefun37p71" path="res://setas_level.tscn" id="4_no6se"]
@@ -27,3 +28,5 @@ offset_left = 515.0
 offset_top = 117.0
 offset_right = 584.0
 offset_bottom = 351.0
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_nwsfa")]
