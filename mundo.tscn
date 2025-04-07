@@ -11,10 +11,6 @@
 [node name="player" parent="." instance=ExtResource("1_wq0o4")]
 position = Vector2(551, 785)
 
-[node name="Camera2D" type="Camera2D" parent="player"]
-zoom = Vector2(0.805, 0.805)
-position_smoothing_enabled = true
-
 [node name="mundo_2_switch" parent="." instance=ExtResource("3_mw32k")]
 position = Vector2(550, 64)
 
@@ -30,3 +26,9 @@ offset_right = 584.0
 offset_bottom = 351.0
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_nwsfa")]
+visible = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(551, 785)
+zoom = Vector2(0.805, 0.805)
+position_smoothing_enabled = true
