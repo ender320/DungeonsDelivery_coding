@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdt7yptow4ctt"]
+
+[ext_resource type="PackedScene" uid="uid://tbeefun37p71" path="res://Cenas/setas_level.tscn" id="1_uj5t8"]
+[ext_resource type="PackedScene" uid="uid://bgvxvjwwigk6q" path="res://Cenas/player.tscn" id="2_168qb"]
+[ext_resource type="PackedScene" uid="uid://dyckmp0cy1s83" path="res://Cenas/enemy.tscn" id="3_6wh44"]
+[ext_resource type="PackedScene" uid="uid://cva0xpfxpigxr" path="res://Cenas/mundo_3_switch.tscn" id="4_2ikwe"]
+[ext_resource type="PackedScene" uid="uid://c0t1blhokni77" path="res://Cenas/crt_effect.tscn" id="5_pcoae"]
+
+[node name="mundo_2" type="Node2D"]
+
+[node name="Setas_Level" parent="." instance=ExtResource("1_uj5t8")]
+light_mask = 1
+offset_left = 657.0
+offset_top = 64.0
+offset_right = 726.0
+offset_bottom = 298.0
+
+[node name="player" parent="." instance=ExtResource("2_168qb")]
+position = Vector2(657, 579)
+
+[node name="enemy" parent="." instance=ExtResource("3_6wh44")]
+position = Vector2(657, 131)
+
+[node name="mundo_3_switch" parent="." instance=ExtResource("4_2ikwe")]
+position = Vector2(657, 0)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("5_pcoae")]
