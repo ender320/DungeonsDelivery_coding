@@ -1,77 +1,30 @@
-[gd_scene load_steps=20 format=3 uid="uid://dyckmp0cy1s83"]
+[gd_scene load_steps=12 format=3 uid="uid://dyckmp0cy1s83"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_3p4ml"]
 [ext_resource type="Texture2D" uid="uid://bhiu1tu4o4lxp" path="res://icon.svg" id="2_jo6ts"]
-[ext_resource type="Texture2D" uid="uid://dtcc0nt56d72b" path="res://player.png" id="3_o6ipd"]
+[ext_resource type="Texture2D" uid="uid://l7h5hn5184bh" path="res://sprites/hiena de frente andando 1.png" id="3_lrc8f"]
+[ext_resource type="Texture2D" uid="uid://b247ltgj5rked" path="res://sprites/hiena de frente andando 2.png" id="4_kryaf"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1x2w1"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(0, 144, 48, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4w2w"]
+atlas = ExtResource("3_lrc8f")
+region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x45fq"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(48, 144, 48, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7xo7"]
+atlas = ExtResource("4_kryaf")
+region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iiun5"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(96, 144, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jfhjg"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(144, 144, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p4e62"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(192, 144, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kcoyb"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(240, 144, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1wmkf"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4n763"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ovvb"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gtdv3"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pnudv"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e2tb4"]
-atlas = ExtResource("3_o6ipd")
-region = Rect2(240, 0, 48, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7w56t"]
+atlas = ExtResource("3_lrc8f")
+region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_53mow"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1x2w1")
+"texture": SubResource("AtlasTexture_v4w2w")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x45fq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iiun5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jfhjg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p4e62")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kcoyb")
+"texture": SubResource("AtlasTexture_b7xo7")
 }],
 "loop": true,
 "name": &"agressivo",
@@ -79,22 +32,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1wmkf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4n763")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4ovvb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gtdv3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pnudv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e2tb4")
+"texture": SubResource("AtlasTexture_7w56t")
 }],
 "loop": true,
 "name": &"idle",
@@ -118,10 +56,11 @@ modulate = Color(1, 0, 0.0431373, 1)
 texture = ExtResource("2_jo6ts")
 
 [node name="AnimatedSprite_enemy" type="AnimatedSprite2D" parent="."]
-position = Vector2(5.96046e-08, 13)
-scale = Vector2(8.2633, 4.88993)
+position = Vector2(20, 2)
+scale = Vector2(3.8633, 1.12993)
 sprite_frames = SubResource("SpriteFrames_53mow")
-animation = &"idle"
+animation = &"agressivo"
+frame_progress = 0.110628
 offset = Vector2(-0.455, -11.19)
 
 [node name="detec_zone" type="Area2D" parent="."]
