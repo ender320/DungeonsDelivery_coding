@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d12wteb2i47jt"]
+
+[ext_resource type="Script" path="res://mundo_2_switch.gd" id="1_gxvqy"]
+[ext_resource type="Texture2D" uid="uid://bhiu1tu4o4lxp" path="res://icon.svg" id="2_eb75a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl2xg"]
+size = Vector2(120, 117)
+
+[node name="mundo_2_switch" type="Area2D"]
+modulate = Color(0.0352941, 0.2, 1, 1)
+script = ExtResource("1_gxvqy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_jl2xg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_eb75a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
